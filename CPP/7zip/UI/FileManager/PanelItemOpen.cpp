@@ -800,7 +800,7 @@ void CApp::DiffFiles()
 {
   const CPanel &panel = GetFocusedPanel();
   
-  if (!panel.Is_IO_FS_Folder())
+  if (!panel.Is_IO_FS_Folder() && !panel.IsArcFolder())
   {
     panel.MessageBox_Error_UnsupportOperation();
     return;
